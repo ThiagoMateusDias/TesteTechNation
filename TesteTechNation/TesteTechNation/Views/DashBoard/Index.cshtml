@@ -1,0 +1,399 @@
+﻿@model List<NotaFiscalViewModel>
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Dashboard Page";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Dashboard - Indicadores e Gráficos</h2>
+
+    <form method="get" asp-action="Index">
+        <div class="row mb-3">
+            <div class="form-group col-md-2 mb-3">
+                <label for="anoPesquisa">Ano</label>
+                <select id="anoPesquisa" name="anoPesquisa" class="form-input form-control">
+                        <option value="0">Todos</option>
+                    @foreach (var item in ViewBag.Anos)
+                    {
+                        bool selecionado = item.Text.ToString() == ViewBag.AnoPesquisa.ToString();
+                        string selecionar = selecionado ? "selected" : "";
+                        @:<option value="@item.Text" @selecionar>@item.Text</option>
+                    }
+                </select>
+            </div> 
+            <div class="form-group col-md-2 mb-3">
+                <label for="mesPesquisa">Mês</label>
+                <select id="mesPesquisa" name="mesPesquisa" class="form-control">
+                    <option value="0">Todos</option>
+                    @{
+                        for (int i = 1; i <= 12; i++)
+                        {
+                            var nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                            var selecionado = i.ToString() == ViewBag.MesPesquisa?.ToString() ? "selected" : "";
+                            var opcao = new TagBuilder("option");
+                            opcao.Attributes["value"] = i.ToString();
+                            if (selecionado == "selected")
+                            {
+                                opcao.Attributes["selected"] = "selected";
+                            }
+                            opcao.InnerHtml.Append(nomeMes);
+                                                            @opcao
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-2 mb-3">
+                <label for="trimestrePesquisa">Trimestre</label>
+                <select id="trimestrePesquisa" name="trimestrePesquisa" class="form-control">
+                    <option value="0">Todos</option>
+                    @{
+                        var trimestres = new List<string> { "1º Trimestre", "2º Trimestre", "3º Trimestre", "4º Trimestre" };
+                        for (int i = 1; i <= 4; i++)
+                        {
+                            var trimestre = trimestres[i - 1];
+                            var selecionado = ViewBag.TrimestrePesquisa == i ? "selected" : "";
+                            var opcao = new TagBuilder("option");
+                            opcao.Attributes["value"] = i.ToString();
+                            if (selecionado == "selected")
+                            {
+                                opcao.Attributes["selected"] = "selected";
+                            }
+                            opcao.InnerHtml.Append(trimestre);
+                                                            @opcao
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-2 mb-3">
+                <label for="mesEmissao">Mês de Emissão</label>
+                <select id="mesEmissao" name="mesEmissao" class="form-control">
+                    <option value="0">Todos</option>
+                    @{
+                        for (int i = 1; i <= 12; i++)
+                        {
+                            var nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                            var selecionado = i.ToString() == ViewBag.MesEmissao?.ToString() ? "selected" : "";
+                            var opcao = new TagBuilder("option");
+                            opcao.Attributes["value"] = i.ToString();
+                            if (selecionado == "selected")
+                            {
+                                opcao.Attributes["selected"] = "selected";
+                            }
+                            opcao.InnerHtml.Append(nomeMes);
+                                                            @opcao
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-2 mb-3">
+                <label for="mesCobranca">Mês de Cobrança</label>
+                <select id="mesCobranca" name="mesCobranca" class="form-control">
+                    <option value="0">Todos</option>
+                    @{
+                        for (int i = 1; i <= 12; i++)
+                        {
+                            var nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                            var selecionado = i.ToString() == ViewBag.MesCobranca?.ToString() ? "selected" : "";
+                            var opcao = new TagBuilder("option");
+                            opcao.Attributes["value"] = i.ToString();
+                            if (selecionado == "selected")
+                            {
+                                opcao.Attributes["selected"] = "selected";
+                            }
+                            opcao.InnerHtml.Append(nomeMes);
+                                                            @opcao
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group col-md-2 mb-3">
+                <label for="mesPagamento">Mês de Pagamento</label>
+                <select id="mesPagamento" name="mesPagamento" class="form-control">
+                    <option value="0">Todos</option>
+                    @{
+                        for (int i = 1; i <= 12; i++)
+                        {
+                            var nomeMes = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                            var selecionado = i.ToString() == ViewBag.MesPagamento?.ToString() ? "selected" : "";
+                            var opcao = new TagBuilder("option");
+                            opcao.Attributes["value"] = i.ToString();
+                            if (selecionado == "selected")
+                            {
+                                opcao.Attributes["selected"] = "selected";
+                            }
+                            opcao.InnerHtml.Append(nomeMes);
+                                                            @opcao
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label for="TipoPagamento">Tipo Pagamento</label>
+                <select id="TipoPagamento" name="tipoPagamentoId" class="form-input form-control">
+                    <option value="">Todos</option>
+                    @foreach (SelectListItem item in ViewBag.TipoPagamento)
+                    {
+                        bool selecionado = item.Value == (ViewBag.TipoPesquisa?.ToString() ?? "");
+                        string selecionar = selecionado ? "selected" : "";
+                        @:<option value="@item.Value" @selecionar>@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label for="StatusNota">Status Nota</label>
+                <select id="StatusNota" name="statusNotaId" class="form-input form-control">
+                    <option value="">Todos</option>
+                    @foreach (SelectListItem item in ViewBag.StatusNota)
+                    {
+                        bool selecionado = item.Value == (ViewBag.StatusPesquisa?.ToString() ?? "");
+                        string selecionar = selecionado ? "selected" : "";
+                        @:<option value="@item.Value" @selecionar>@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4 mb-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary sem-arredondamento-direito w-50">Filtrar</button>
+                <button type="submit" name="limpar" id="limpar" value="1" class="btn btn-warning sem-arredondamento-esquerdo w-50">Limpar</button>            
+            </div>
+        </div>
+    </form>
+
+    <div class="row mb-4">
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Total Geral</h6>
+                    <p class="card-text">@ViewBag.TotalNotasGeral</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    @* <h6 class="card-title">Total do Ano @ViewBag.AnoPesquisa</h6> *@
+                    <h6 class="card-title">
+                        @if (ViewBag.AnoPesquisa != "0")
+                        {
+                            <span>Total do Ano @ViewBag.AnoPesquisa</span>
+                        }
+                        else
+                        {
+                            <span>Total</span>                            
+                        }
+                    </h6>
+                    <p class="card-text">@ViewBag.TotalNotasAno</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Sem Cobrança</h6>
+                    <p class="card-text">@ViewBag.NotasSemCobrancaAno</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Inadimplência</h6>
+                    <p class="card-text">@ViewBag.NotasInadimplenciaAno</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h6 class="card-title">A Vencer</h6>
+                    <p class="card-text">@ViewBag.NotasAVencerAno</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Pagas</h6>
+                    <p class="card-text">@ViewBag.NotasPagasAno</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Evolução da Inadimplência</h5>
+                            <canvas id="inadimplenciaChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Evolução da Receita Recebida</h5>
+                            <canvas id="receitaChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h2 class="text-center mb-4">Lista de Notas Fiscais</h2>
+
+    <div class="table-responsive col-12">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Pagador</th>
+                    <th scope="col">Número Identificação</th>
+                    <th scope="col">Data Emissão</th>
+                    <th scope="col">Data Cobrança</th>
+                    <th scope="col">Data Pagamento</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Nota fiscal</th>
+                     <th scope="col">Boleto bancário</th>
+                    <th scope="col">Status Nota</th>
+                    <th scope="col">Tipo Pagamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var nota in Model)
+                {
+                    <tr>
+                        <td>@nota.Pagador.Nome</td>
+                        <td>@nota.NumeroIdentificacao</td>
+                        <td>@nota.DataEmissao.ToString("dd/MM/yyyy")</td>
+                        <td>@(nota.DataCobranca.HasValue ? nota.DataCobranca.Value.ToString("dd/MM/yyyy") : "-")</td>
+                        <td>@(nota.DataPagamento.HasValue ? nota.DataPagamento.Value.ToString("dd/MM/yyyy") : "-")</td>
+                        <td>@nota.Valor.ToString("C2")</td>
+                        <td>@nota.DocumentoNotaFiscal</td>
+                        <td>@nota.DocumentoBoletoBancario</td>
+                        <td>@nota.StatusNota.Descricao</td>
+                        <td>@(nota.TipoPagamento != null ? nota.TipoPagamento.Descricao : "-")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .sem-arredondamento-direito {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .sem-arredondamento-esquerdo {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        const labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+        var inadimplenciaData = [];
+        var receitaData = [];
+
+        function carregarDados() {
+            var filtroData = {
+                tipoPagamentoId: $('#TipoPagamento').val(),
+                statusNotaId: $('#StatusNota').val(),
+                anoPesquisa: $('#anoPesquisa').val(),
+                mesPesquisa: $('#mesPesquisa').val(),
+                trimestrePesquisa: $('#trimestrePesquisa').val(),
+                mesEmissao: $('#mesEmissao').val(),
+                mesCobranca: $('#mesCobranca').val(),
+                mesPagamento: $('#mesPagamento').val(),
+                limpar: $('#limpar').val()
+            };
+
+            $.ajax({
+                url: '/DashBoard/ObterDadosFinanceiros',
+                method: 'GET',
+                data: filtroData,
+                success: function (data) {
+                    inadimplenciaData = data.inadimplencia;
+                    receitaData = data.receita;
+
+                    atualizarGraficoInadimplencia(inadimplenciaData);
+                    atualizarGraficoReceita(receitaData);
+                },
+                error: function (err) {
+                    console.error('Erro ao carregar dados:', err);
+                }
+            });
+        }
+
+        $('#filtroForm').submit(function (event) {
+            event.preventDefault();
+            carregarDados();
+        });
+
+        function atualizarGraficoInadimplencia(inadimplenciaData) {
+            inadimplenciaChart.data.labels = labels;
+            inadimplenciaChart.data.datasets[0].data = inadimplenciaData;
+            inadimplenciaChart.update();
+        }
+
+        function atualizarGraficoReceita(receitaData) {
+            receitaChart.data.labels = labels;
+            receitaChart.data.datasets[0].data = receitaData;
+            receitaChart.update();
+        }
+
+        var inadimplenciaCtx = document.getElementById('inadimplenciaChart').getContext('2d');
+        var inadimplenciaChart = new Chart(inadimplenciaCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Valor da Inadimplência',
+                    data: inadimplenciaData,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var receitaCtx = document.getElementById('receitaChart').getContext('2d');
+        var receitaChart = new Chart(receitaCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Valor da Receita',
+                    data: receitaData,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        carregarDados();
+
+    </script>
+}

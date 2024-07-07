@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teste Unecont</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TesteTechNation.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="sidebar d-lg-block bg-white">
+        <div class="position-sticky">
+            <div class="sidebar-header text-center py-3">
+                <a href="~/Home/Index" class="navbar-brand d-flex align-items-center justify-content-center">
+                    <img src="https://storage.googleapis.com/wzukusers/user-34594683/images/5d03ccdbe563d8A2WETq/image002.png" height="25" alt="Logo" loading="lazy" />
+                    <span class="ms-2 text-white"><h4>Unecont</h4></span>
+                </a>
+            </div>
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <a id="homeLink" href="~/Home/Index" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                    <i class="fas fa-tachometer-alt fa-fw me-3 d-none d-lg-inline"></i><span class="d-lg-inline d-none">Home</span>
+                </a>
+                <a id="dashboardLink" href="~/DashBoard/Index" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-chart-area fa-fw me-3 d-none d-lg-inline"></i><span class="d-lg-inline d-none">DashBoard</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="margin-left: 240px;">
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand -->
+                <div class="navbar-brand">
+                    <h3 class="mb-0"><span class="ms-2" id="currentMenuTitle"></span></h3>
+                </div>
+
+                <!-- Right links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <!-- Avatar -->
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="#" role="button" aria-expanded="false">
+                                <img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg" class="rounded-circle" height="22" alt="Avatar" loading="lazy" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+    <!--Main layout-->
+    <main style="margin-top: 58px;">
+        <div class="container pt-4">@RenderBody()</div>
+    </main>
+    <!--Main layout-->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var currentUrl = window.location.href;
+            var menuTitle = "Menu";
+
+            if (currentUrl.endsWith("/") || currentUrl.includes("/Home/Index")) {
+                $("#homeLink").addClass("active");
+                menuTitle = "Home";
+            }
+
+            if (currentUrl.includes("/DashBoard/Index")) {
+                $("#dashboardLink").addClass("active");
+                menuTitle = "DashBoard";
+            }
+
+            $("#currentMenuTitle").text(menuTitle);
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
