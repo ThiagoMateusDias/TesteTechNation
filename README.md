@@ -2,8 +2,9 @@ Sistema de Gestão Financeira.
 
 Este projeto é uma aplicação web desenvolvida em ASP.NET Core para gerenciar indicadores financeiros de uma empresa. A aplicação permite visualizar e filtrar dados de notas fiscais emitidas, integrando funcionalidades de dashboard com gráficos interativos.
 
-![telagrafico](https://github.com/ThiagoMateusDias/TesteTechNation/assets/155456682/fba4afcf-bc10-4836-986a-1501c01eebdc)
-![telaLista](https://github.com/ThiagoMateusDias/TesteTechNation/assets/155456682/def663ad-6b76-4d61-80fa-d587a9d0442f)
+![telaGraficos](https://github.com/ThiagoMateusDias/TesteTechNation/assets/155456682/1d95280a-0fd5-4aa6-b908-2b7fe5326ea0)
+![telaLista](https://github.com/ThiagoMateusDias/TesteTechNation/assets/155456682/7536dc6f-3be6-4d45-9ccc-f5ff98101124)
+
 
 Funcionalidades Principais.
 
