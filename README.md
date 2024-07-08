@@ -23,4 +23,22 @@ Como Executar.
 
 Requisitos: Certifique-se de ter o .NET LTS instalado e um banco de dados SQL Server configurado.
 Configuração: Clone o repositório e configure as conexões de banco de dados em appsettings.json.
-Execução: Abra o projeto no Visual Studio ou utilize o terminal para executar dotnet run.
+
+1 - Baixar a imagem do SQL Server:
+Execute o comando abaixo no terminal para baixar a imagem do SQL Server 2022:
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+2 - Rodar o contêiner do SQL Server:
+Execute o comando abaixo para aceitar os termos de licença e iniciar o contêiner do SQL Server:
+docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Mudar123@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+
+3 - Conectar ao SQL Server:
+Conecte-se ao SQL Server utilizando a string de conexão localhost,1433 e as credenciais definidas (sa/Mudar123@).
+
+4 - Executar o script para criar banco de dados e tabelas:
+Baixe e execute o script SQL disponível em:
+https://github.com/ThiagoMateusDias/TesteTechNation/blob/master/TesteTechNation/TesteTechNation.Data/Script.sql
+
+5 - Executar o projeto no Visual Studio:
+Abra o projeto no Visual Studio e selecione a opção para executar como contêiner (file).
+
