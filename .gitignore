@@ -1,0 +1,173 @@
+﻿# Compiled object files
+*.o
+*.lo
+*.la
+*.al
+*.gch
+*.pch
+*.mo
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Generated files
+*.log
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.run.xml
+
+# OS generated files
+.DS_Store
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Visual Studio
+.vscode/
+.vscode/*
+.vscode/.*.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-workspace
+.vscode/**/*.code-workspace
+.vs/
+.vs/*
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Microsoft Azure Web App publish settings. [INFO: May be placed in some `Application` subfolders as well.]
+*.azurePubxml
+*.azurePubxml.user
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment Variables
+.env
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/obj/
+**/bin/
+**/.vs/
+**/.userprefs
+**/*.user
+**/project.lock.json
+**/project.fragment.lock.json
+
+# Rider
+.idea/
+
+# Visual Studio
+.vscode/
+.vscode/*
+
+# macOS
+*.DS_Store
+._*
+
+# Common development directories
+node_modules/
+dist/
+bower_components/
+
+# Compiled files
+*.dll
+*.exe
+
+# nuget
+*.nupkg
+*.snupkg
+
+# Other
+**/src/**/*.css
+**/src/**/*.map

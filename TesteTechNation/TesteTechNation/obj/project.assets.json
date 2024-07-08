@@ -4362,9 +4362,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.Web.csproj",
-      "projectName": "TesteTechNation.Web",
-      "projectPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.Web.csproj",
+      "projectUniqueName": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.csproj",
+      "projectName": "TesteTechNation",
+      "projectPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.csproj",
       "packagesPath": "C:\\Users\\tmdia\\.nuget\\packages\\",
       "outputPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,7 +1,30 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3B11133-A753-4A58-8304-2CDA0FE010B0}|..\\TesteTechNation.Data\\TesteTechNation.Data.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation.data\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FB83E17A-B2D0-475A-931C-91BE87E663A9}|TesteTechNation.csproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3B11133-A753-4A58-8304-2CDA0FE010B0}|..\\TesteTechNation.Data\\TesteTechNation.Data.csproj|c:\\git\\testeunecont\\testetechnation\\testetechnation.data\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 298,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +57,70 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Script.sql ",
+              "DocumentMoniker": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\Script.sql",
+              "RelativeDocumentMoniker": "..\\TesteTechNation.Data\\Script.sql",
+              "ToolTip": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\Script.sql",
+              "RelativeToolTip": "..\\TesteTechNation.Data\\Script.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-08T21:52:15.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-08T00:43:53.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-07T22:19:25.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-07T22:19:21.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-07-07T22:19:20.088Z",
+              "EditorCaption": ""
             }
           ]
         }

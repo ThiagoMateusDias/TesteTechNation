@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using TesteTechNation.Web.Models;
+using TesteTechNation.Models;
 
-namespace TesteTechNation.Web.AutoMapper
+namespace TesteTechNation.AutoMapper
 {
     public class AutoMapperConfig : Profile
     {

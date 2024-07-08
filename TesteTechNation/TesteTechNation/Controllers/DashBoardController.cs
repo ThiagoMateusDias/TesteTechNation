@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using TesteTechNation.Business.Interface;
-using TesteTechNation.Web.Models;
+using TesteTechNation.Models;
 
-namespace TesteTechNation.Web.Controllers
+namespace TesteTechNation.Controllers
 {
     public class DashBoardController : Controller
     {

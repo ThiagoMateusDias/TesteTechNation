@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace TesteTechNation.Web;
+namespace TesteTechNation;
 
 public partial class DashBoardFiscaisContext : DbContext
 {

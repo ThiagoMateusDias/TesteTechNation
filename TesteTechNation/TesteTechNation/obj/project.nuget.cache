@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W8dqBqODNQs=",
+  "dgSpecHash": "rT/X0JjcFMc=",
   "success": true,
-  "projectFilePath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.Web.csproj",
+  "projectFilePath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation\\TesteTechNation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tmdia\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\tmdia\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

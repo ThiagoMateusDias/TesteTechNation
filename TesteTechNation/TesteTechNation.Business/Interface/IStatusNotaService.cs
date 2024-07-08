@@ -1,4 +1,4 @@
-﻿using TesteTechNation.Web;
+﻿using TesteTechNation;
 
 namespace TesteTechNation.Business.Interface
 {

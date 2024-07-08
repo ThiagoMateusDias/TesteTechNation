@@ -1,26 +1,20 @@
-version: '3.4'
+version: '3.8'
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server
+  webapp:
+    image: sua-imagem-webapp
+    ports:
+      - "5000:80"
     environment:
-      SA_PASSWORD: "Your_password123"
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=DashBoardFiscais;User ID=sa;Password=Mudar123@;Trusted_Connection=False;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "Mudar123@"
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
-    volumes:
-      - sqlserverdata:/var/opt/mssql
-
-  webapp:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      - sqlserver
-    environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TesteTech;User Id=sa;Password=MyPass;
-    ports:
-      - "8080:80"
-
-volumes:
-  sqlserverdata:

@@ -1,6 +1,6 @@
 ﻿using TesteTechNation.Business.Interface;
 using TesteTechNation.Data.Repository;
-using TesteTechNation.Web;
+using TesteTechNation;
 
 namespace TesteTechNation.Business.Services
 {

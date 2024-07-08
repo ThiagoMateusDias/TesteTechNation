@@ -1,4 +1,4 @@
-﻿namespace TesteTechNation.Web;
+﻿namespace TesteTechNation;
 
 public partial class StatusNotum
 {

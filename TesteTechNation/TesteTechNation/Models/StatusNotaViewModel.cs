@@ -1,4 +1,4 @@
-﻿namespace TesteTechNation.Web.Models
+﻿namespace TesteTechNation.Models
 {
     public class StatusNotaViewModel
     {

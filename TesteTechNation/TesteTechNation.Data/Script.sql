@@ -1,3 +1,5 @@
+CREATE DATABASE DashBoardFiscais;
+
 CREATE TABLE StatusNota (
     Id INT PRIMARY KEY IDENTITY(1, 1),
     Descricao NVARCHAR(50) NOT NULL
