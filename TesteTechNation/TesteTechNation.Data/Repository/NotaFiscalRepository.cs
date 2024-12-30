@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TesteTechNation;
 
 namespace TesteTechNation.Data.Repository
 {

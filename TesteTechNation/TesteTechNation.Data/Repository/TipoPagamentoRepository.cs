@@ -1,6 +1,4 @@
-﻿using TesteTechNation;
-
-namespace TesteTechNation.Data.Repository
+﻿namespace TesteTechNation.Data.Repository
 {
     public class TipoPagamentoRepository : Repository<TipoPagamento>
     {

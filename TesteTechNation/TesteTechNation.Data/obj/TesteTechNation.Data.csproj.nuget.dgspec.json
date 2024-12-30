@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj": {}
+    "D:\\GitHubProj\\TesteTechNation\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj": {}
   },
   "projects": {
-    "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj": {
+    "D:\\GitHubProj\\TesteTechNation\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj",
+        "projectUniqueName": "D:\\GitHubProj\\TesteTechNation\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj",
         "projectName": "TesteTechNation.Data",
-        "projectPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj",
-        "packagesPath": "C:\\Users\\tmdia\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT\\TesteUnecont\\TesteTechNation\\TesteTechNation.Data\\obj\\",
+        "projectPath": "D:\\GitHubProj\\TesteTechNation\\TesteTechNation\\TesteTechNation.Data\\TesteTechNation.Data.csproj",
+        "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHubProj\\TesteTechNation\\TesteTechNation\\TesteTechNation.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tmdia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -54,17 +55,17 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -83,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

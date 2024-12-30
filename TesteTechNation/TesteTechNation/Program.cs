@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using TesteTechNation;
 using TesteTechNation.Business.Interface;
 using TesteTechNation.Business.Services;
 using TesteTechNation.Data.Repository;
-using TesteTechNation;
 
 var builder = WebApplication.CreateBuilder(args);
 

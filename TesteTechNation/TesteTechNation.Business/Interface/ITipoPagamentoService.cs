@@ -1,6 +1,4 @@
-﻿using TesteTechNation;
-
-namespace TesteTechNation.Business.Interface
+﻿namespace TesteTechNation.Business.Interface
 {
     public interface ITipoPagamentoService : IDisposable
     {

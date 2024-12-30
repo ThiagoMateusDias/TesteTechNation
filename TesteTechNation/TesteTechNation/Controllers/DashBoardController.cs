@@ -23,6 +23,7 @@ namespace TesteTechNation.Controllers
             _tipoPagamentoService = tipoPagamentoService ?? throw new ArgumentNullException(nameof(tipoPagamentoService));
             _mapper = mapper;
         }
+
         public async Task<IActionResult> Index(int? tipoPagamentoId, int? statusNotaId, int? anoPesquisa, int? mesPesquisa, int? trimestrePesquisa, int? mesEmissao, int? mesCobranca, int? mesPagamento, int limpar = 0)
         {
             if (limpar == 1)
@@ -61,7 +62,7 @@ namespace TesteTechNation.Controllers
             ViewBag.StatusNota = new SelectList(statusNotaSelectList, "Value", "Text").OrderBy(o => o.Text).ToList();
             ViewBag.StatusPesquisa = statusNotaId;
 
-            ViewBag.Anos = new SelectList(notasFiscaisTodas.Select(s => s.DataEmissao.Year).Distinct().OrderBy(o => o).ToList()); 
+            ViewBag.Anos = new SelectList(notasFiscaisTodas.Select(s => s.DataEmissao.Year).Distinct().OrderBy(o => o).ToList());
             ViewBag.AnoPesquisa = anoPesquisa.ToString();
             ViewBag.MesPesquisa = mesPesquisa;
             ViewBag.TrimestrePesquisa = trimestrePesquisa;
@@ -78,7 +79,6 @@ namespace TesteTechNation.Controllers
 
             return View(notasFiscaisFiltro);
         }
-
 
         public async Task<JsonResult> ObterDadosFinanceiros(int? tipoPagamentoId, int? statusNotaId, int? anoPesquisa, int? mesPesquisa, int? trimestrePesquisa, int? mesEmissao, int? mesCobranca, int? mesPagamento)
         {

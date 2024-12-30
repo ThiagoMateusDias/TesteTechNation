@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TesteTechNation.Data.Interface;
-using TesteTechNation;
 
 namespace TesteTechNation.Data.Repository
 {

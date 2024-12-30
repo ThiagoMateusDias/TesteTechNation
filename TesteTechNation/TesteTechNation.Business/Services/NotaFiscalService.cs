@@ -1,6 +1,5 @@
 ﻿using TesteTechNation.Business.Interface;
 using TesteTechNation.Data.Repository;
-using TesteTechNation;
 
 namespace TesteTechNation.Business.Services
 {
@@ -44,12 +43,15 @@ namespace TesteTechNation.Business.Services
                     case 1:
                         mesesTrimestre = new int[] { 1, 2, 3 };
                         break;
+
                     case 2:
                         mesesTrimestre = new int[] { 4, 5, 6 };
                         break;
+
                     case 3:
                         mesesTrimestre = new int[] { 7, 8, 9 };
                         break;
+
                     case 4:
                         mesesTrimestre = new int[] { 10, 11, 12 };
                         break;
